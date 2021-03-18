@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  API-Gateway
+; Author: Kevin Jones
+; Date: 17 January 2021
+; Description: app.js file for gateway project
+;===========================================
+*/
+
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
