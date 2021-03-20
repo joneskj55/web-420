@@ -16,7 +16,7 @@ var mongoose = require("mongoose");
 
 var indexRouter = require("./routes/index");
 
-// Connect to MongoDB
+// Connect to MongoDB ***** PLEASE LET ME KNOW IF YOU NEED THE ACTUAL URL *****
 var mongoDB = "mongodb://localhost:27017/test";
 mongoose.connect(mongoDB, {
   useNewUrlParser: true,
