@@ -15,4 +15,13 @@ const userSchema = new mongoose.Schema({
   email: String,
 });
 
+// add new user to db
+module.exports.add = (user, callback) => {
+  user.save(callback);
+};
+
+module.exports.getById = (id, callback) => {
+  var query = { _id: id };
+};
+
 module.exports = mongoose.model("User", userSchema);
