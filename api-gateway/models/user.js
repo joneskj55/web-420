@@ -22,7 +22,14 @@ module.exports.add = (user, callback) => {
   user.save(callback);
 };
 
+// get user by id
 module.exports.getById = (id, callback) => {
   var query = { _id: id };
   User.findById(query, callback);
+};
+
+// find user by email
+module.exports.getOne = (e, callback) => {
+  var query = { email: e };
+  User.findOne(query, callback);
 };

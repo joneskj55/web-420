@@ -15,7 +15,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var apiCatalog = require("./routes/api-catalog");
 
-var indexRouter = require("./routes/index");
+var index = require("./routes/index");
 
 // Connect to MongoDB ***** PLEASE LET ME KNOW IF YOU NEED THE ACTUAL URL *****
 var mongoDB = "mongodb://localhost:27017/test";
@@ -43,7 +43,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
+app.use("/", index);
 app.use("/api", apiCatalog); // register the API catalog's routes
 
 // catch 404 and forward to error handler
