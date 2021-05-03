@@ -11,12 +11,13 @@
 const express = require("express");
 const router = express.Router();
 const auth_controller = require("../controllers/authController");
+const checkToken = require("../check-token");
 
 // POST request for registering a user
 router.post("/auth/register", auth_controller.user_register);
 
 // GET request for verifying user tokens
-router.get("/auth/token", auth_controller.user_token);
+router.get("/auth/token", checkToken, auth_controller.user_token);
 
 // user login requests
 router.post("/auth/login", auth_controller.user_login);
